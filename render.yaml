@@ -1,0 +1,15 @@
+
+## Файл 4: `render.yaml`
+
+```yaml
+services:
+  - type: web
+    name: website-monitor-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+    healthCheckPath: /
+    autoDeploy: true
